@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="get">
+        <input  name="q" type="search" placeholder="Введите производителя">
+        <input  name="w" type="search" placeholder="Введите модель">
+        <button>Поиск</button>
+    </form>
+    {% for n in car_list %}
+        <p>{{ n.producer }} {{ n.car_model }} {{ n.year_of_release }} {{ n.transmission }} {{ n.color }}</p>
+    {% endfor %}
+</body>
+</html>
